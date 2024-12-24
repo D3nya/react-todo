@@ -1,0 +1,19 @@
+@import url(./fonts.css);
+@import url(./variables.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  background-color: var(--gray-color);
+  color: var(--orange-color);
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--light-gray-color);
+}

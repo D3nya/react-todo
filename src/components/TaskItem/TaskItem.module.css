@@ -1,0 +1,39 @@
+.list_item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.btn_close {
+  flex-shrink: 0;
+  width: 10%;
+  border-color: var(--red-color);
+}
+
+.btn_close:hover {
+  background-color: var(--red-color);
+}
+
+.input:checked + .text_checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--light-gray-color);
+  flex-shrink: 0;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.input[type='checkbox']:focus {
+  outline: none;
+}
+
+.task__text {
+  font-size: 22px;
+}
