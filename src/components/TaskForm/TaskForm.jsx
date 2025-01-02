@@ -1,7 +1,7 @@
-import React from 'react';
-import MyButton from '../UI/button/MyButton';
-import MyInput from '../UI/input/MyInput';
-import { form, input, header, button, text_bold } from './TaskForm.module.css';
+import React from "react";
+
+import MyButton from "../UI/button/MyButton";
+import MyInput from "../UI/input/MyInput";
 
 const TaskForm = ({ task, setTask, setTasks }) => {
   const pushTask = (e) => {
@@ -14,8 +14,11 @@ const TaskForm = ({ task, setTask, setTasks }) => {
   };
 
   return (
-    <form className={form} onSubmit={pushTask}>
-      <label className={`${header} ${text_bold}`} htmlFor="task">
+    <form className="flex flex-col items-center mt-10" onSubmit={pushTask}>
+      <label
+        className="font-semibold text-4xl mb-2 text-slate-900 dark:text-white"
+        htmlFor="task"
+      >
         New task
       </label>
       <MyInput
@@ -23,9 +26,9 @@ const TaskForm = ({ task, setTask, setTasks }) => {
         id="task"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        className={input}
+        className="mb-2 w-3/4 dark:bg-slate-800 dark:border-gray-700 text-slate-900 dark:text-white dark:placeholder-gray-400"
       />
-      <MyButton className={button}>Add task</MyButton>
+      <MyButton className="w-1/4">Add task</MyButton>
     </form>
   );
 };

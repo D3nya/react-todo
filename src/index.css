@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .todo-text {
+    @apply text-xl mx-4 grow max-w-screen-lg break-words text-slate-900 dark:text-white;
+  }
+}

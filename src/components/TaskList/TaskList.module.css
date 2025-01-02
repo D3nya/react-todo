@@ -1,9 +1,0 @@
-.header__center {
-  text-align: center;
-}
-
-.header {
-  color: var(--red-color);
-  font-size: 50px;
-  margin-bottom: 5px;
-}
