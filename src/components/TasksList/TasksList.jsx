@@ -1,8 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
 
-import TaskItem from "../TaskItem/TaskItem";
+import Task from "../Task/Task";
 
-const TaskList = ({ tasks, setTasks }) => {
+import { useTasksContext } from "../../contexts/TasksContext";
+
+const TasksList = memo(() => {
+  const { tasks, setTasks } = useTasksContext();
+
   return (
     <>
       <h3 className="font-semibold text-5xl mt-4 mb-1 ml-4 text-slate-900 dark:text-white">
@@ -15,7 +19,7 @@ const TaskList = ({ tasks, setTasks }) => {
           </h3>
         )}
         {tasks.map(({ id, text, completed }) => (
-          <TaskItem
+          <Task
             key={id}
             id={id}
             text={text}
@@ -26,6 +30,6 @@ const TaskList = ({ tasks, setTasks }) => {
       </ul>
     </>
   );
-};
+});
 
-export default TaskList;
+export default TasksList;
